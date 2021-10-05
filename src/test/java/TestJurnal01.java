@@ -1,5 +1,3 @@
-package org.d3ifcool.ima03;
-
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -9,17 +7,17 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestTP01 {
+public class TestJurnal01 {
 
     private static final String[] INPUT = {
-            "10000 30"
+            "4"
     };
     private static final String[] OUTPUT = {
-            "300000"
+            "16"
     };
 
     @Test
-    public void testTP() {
+    public void testJurnal() {
         InputStream originalIn = System.in;
         PrintStream originalOut = System.out;
 
@@ -28,7 +26,7 @@ public class TestTP01 {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             System.setOut(new PrintStream(bos));
 
-            TP01.main(null);
+            Jurnal01.main(null);
 
             assertEquals(OUTPUT[i] + "\n", bos.toString());
         }

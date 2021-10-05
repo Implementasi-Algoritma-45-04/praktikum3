@@ -1,5 +1,3 @@
-package org.d3ifcool.ima03;
-
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -9,17 +7,17 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestTP02 {
+public class TestJurnal02 {
 
     private static final String[] INPUT = {
-            "Indra Azimi\n20"
+            "Implementasi Algoritma\n6"
     };
     private static final String[] OUTPUT = {
-            "Halo, Indra Azimi.\nTernyata usiamu baru 20 tahun ya!"
+            "Aku suka kuliah Implementasi Algoritma.\nKuliah 6 jam per minggu rasanya kurang.\nTambahin dong jadi 12 jam per minggu :)" 
     };
 
     @Test
-    public void testTP() {
+    public void testJurnal() {
         InputStream originalIn = System.in;
         PrintStream originalOut = System.out;
 
@@ -28,7 +26,7 @@ public class TestTP02 {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             System.setOut(new PrintStream(bos));
 
-            TP02.main(null);
+            Jurnal02.main(null);
 
             assertEquals(OUTPUT[i] + "\n", bos.toString());
         }
